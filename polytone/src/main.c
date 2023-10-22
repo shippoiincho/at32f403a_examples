@@ -777,9 +777,9 @@ void toneinit(void)
     gpio_init(GPIOA, &gpio_init_struct);
 
     //  for debug
-    gpio_init_struct.gpio_pins = GPIO_PINS_9;
-    gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
-    gpio_init(GPIOA, &gpio_init_struct);
+//    gpio_init_struct.gpio_pins = GPIO_PINS_9;
+//    gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
+//    gpio_init(GPIOA, &gpio_init_struct);
 
 }
 
@@ -1024,7 +1024,7 @@ void systick_handler(void)
     uint32_t pon_count;
     uint16_t volume;
 
-    GPIOA->scr = GPIO_PINS_9;    
+//    GPIOA->scr = GPIO_PINS_9;    
 
     volume = 0;
 
@@ -1050,6 +1050,6 @@ void systick_handler(void)
 
     TMR1->c1dt = volume * (256 / POLY);
 
-    GPIOA->clr = GPIO_PINS_9;   
+//    GPIOA->clr = GPIO_PINS_9;   
 
 }
